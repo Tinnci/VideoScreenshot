@@ -3,7 +3,7 @@ Python3通过OpenCV对比图片相似度_Python_u014259820的博客-CSDN博客
 https://blog.csdn.net/u014259820/article/details/82889752
 """
 
-from skimage.measure import compare_ssim
+from skimage.metrics import structural_similarity
 import cv2
 
 
@@ -18,7 +18,7 @@ class CompareImage():
     def compare_gray(self, imageA, imageB):
         grayA = cv2.cvtColor(imageA, cv2.COLOR_BGR2GRAY)
         grayB = cv2.cvtColor(imageB, cv2.COLOR_BGR2GRAY)
-        (score, diff) = compare_ssim(grayA, grayB, full=True)
+        (score, diff) = structural_similarity(grayA, grayB, full=True)
         # print("SSIM: {}".format(score))
         return score
 

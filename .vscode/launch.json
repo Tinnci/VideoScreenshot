@@ -1,0 +1,32 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "运行vshot.py (测试视频)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/vshot.py",
+            "args": [
+                "./test/ppt_video.mp4",
+                "-o", "./output/",
+                "-s", "1",
+                "-S", "0.999",
+                "-m", "5",
+                "-a", "10",
+                "-d",
+                "--sort"
+            ],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        },
+        {
+            "name": "运行vshot.py (自定义参数)",
+            "type": "python",
+            "request": "launch",
+            "program": "${workspaceFolder}/vshot.py",
+            "args": [],
+            "console": "integratedTerminal",
+            "justMyCode": true
+        }
+    ]
+} 
